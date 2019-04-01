@@ -10,20 +10,23 @@ import "isomorphic-fetch"
 
 function* getPropertyDetail(action) {
     console.log("getPropertyDetail api called ==>>", action)
+
     try {
-        const response = yield call(fetch, "https://devapi.biproxi.com/v1/listing?listing_id=" + action.id, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
+        if (action.id != "favicon.ico") {
+            const response = yield call(fetch, "https://devapi.biproxi.com/v1/listing?listing_id=" + action.id, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            if (response.status === 200) {
+                const data = yield response.json()
+                console.log("data==>>>>", data)
+                yield put({ type: RECEIVE_COUNTRY, payload: data.data })
             }
-        })
-        if (response.status === 200) {
-            const data = yield response.json()
-            console.log("data==>>>>", data)
-            yield put({ type: RECEIVE_COUNTRY, payload: data.data })
-        }
-        else {
-            throw { message: "Error in fetching most viewed property. Try again." }
+            else {
+                throw { message: "Error in fetching most viewed property. Try again." }
+            }
         }
     }
     catch (error) {

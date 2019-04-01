@@ -32,12 +32,12 @@ export default class Countries extends Component {
         <div className="countries-container">
           <h1>Check dynamic page number</h1>
           <ol>
-            <li><Link to={"property/9635"}>Crossing Plaza</Link></li>
-            <li><Link to={"property/12681"}>Walgreens</Link></li>
-            <li><Link to={"property/12764"}>7-Eleven</Link></li>
-            <li><Link to={"property/11169"}>United Bank & Walnut Street Finance</Link></li>
-            <li><Link to={"property/12713"}>BMO Harris Bank</Link></li>
-            <li><Link to={"property/6988"}>10,286 SF Free Standing Office Bldg For Sale</Link></li>
+            <li><Link to={"/9635"}>Crossing Plaza</Link></li>
+            <li><Link to={"/12681"}>Walgreens</Link></li>
+            <li><Link to={"/12764"}>7-Eleven</Link></li>
+            <li><Link to={"/11169"}>United Bank & Walnut Street Finance</Link></li>
+            <li><Link to={"/12713"}>BMO Harris Bank</Link></li>
+            <li><Link to={"/6988"}>10,286 SF Free Standing Office Bldg For Sale</Link></li>
           </ol>
           {/* {data.map((item, i) => <CountriesItem key={i} {...item} />)} */}
         </div>
