@@ -238,7 +238,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Countries = __webpack_require__(/*! ../components/Countries */ \"./src/components/Countries/index.js\");\n\nvar _Countries2 = _interopRequireDefault(_Countries);\n\nvar _Country = __webpack_require__(/*! ../components/Country */ \"./src/components/Country/index.js\");\n\nvar _Country2 = _interopRequireDefault(_Country);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = [{\n  component: _Countries2.default,\n  path: '/',\n  exact: true\n}, {\n  component: _Country2.default,\n  path: '/:name'\n}];\n\n//# sourceURL=webpack:///./src/router/Routes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Countries = __webpack_require__(/*! ../components/Countries */ \"./src/components/Countries/index.js\");\n\nvar _Countries2 = _interopRequireDefault(_Countries);\n\nvar _Country = __webpack_require__(/*! ../components/Country */ \"./src/components/Country/index.js\");\n\nvar _Country2 = _interopRequireDefault(_Country);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = [{\n  component: _Countries2.default,\n  path: '/',\n  exact: true,\n  prop_id: \"123456\"\n}, {\n  component: _Country2.default,\n  path: '/:name',\n  prop_id: \"123456\"\n}];\n\n//# sourceURL=webpack:///./src/router/Routes.js?");
 
 /***/ }),
 

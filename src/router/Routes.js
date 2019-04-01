@@ -6,10 +6,12 @@ export default [
   {
     component: Countries,
     path: '/',
-    exact: true
+    exact: true,
+    prop_id: "123456"
   },
   {
     component: Country,
-    path: '/:name'
+    path: '/:name',
+    prop_id: "123456"
   }
 ];
