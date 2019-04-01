@@ -1,0 +1,30 @@
+import {
+  REQUEST_COUNTRY,
+  RECEIVE_COUNTRY
+} from "../action/types";
+
+const INITIAL_STATE = {
+  name: '',
+  nativeName: '',
+  flag: '',
+  capital: '',
+  region: '',
+  population: '',
+  languages: [],
+  isFetching: false,
+  lastUpdate: Date.now(),
+  propertyData: []
+};
+
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case REQUEST_COUNTRY: {
+      return { ...state, isFetching: true };
+    }
+    case RECEIVE_COUNTRY: {
+      console.log("RECEIVE_COUNTRY==>>", action.payload)
+      return { ...state, isFetching: false, propertyData: action.payload };
+    }
+    default: return state;
+  }
+};
