@@ -11,7 +11,7 @@ export default [
   },
   {
     component: Country,
-    path: '/:name',
+    path: '/property/:name',
     prop_id: "123456"
   }
 ];

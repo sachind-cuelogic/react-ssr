@@ -1,16 +1,10 @@
 import {
   REQUEST_COUNTRY,
-  RECEIVE_COUNTRY
+  RECEIVE_COUNTRY,
+  RESET_COUNTRY
 } from "../action/types";
 
 const INITIAL_STATE = {
-  name: '',
-  nativeName: '',
-  flag: '',
-  capital: '',
-  region: '',
-  population: '',
-  languages: [],
   isFetching: false,
   lastUpdate: Date.now(),
   propertyData: []
@@ -25,6 +19,12 @@ export default (state = INITIAL_STATE, action) => {
       console.log("RECEIVE_COUNTRY==>>", action.payload)
       return { ...state, isFetching: false, propertyData: action.payload };
     }
+
+    case RESET_COUNTRY: {
+      console.log("RECEIVE_COUNTRY==>>", action.payload)
+      return { ...state, isFetching: false, propertyData: [] };
+    }
+
     default: return state;
   }
 };
